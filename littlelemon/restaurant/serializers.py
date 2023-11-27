@@ -7,7 +7,7 @@ from .models import Booking
 #         model = Booking
 #         fields = '__all__'
 
-# class UserSerializer(ModelSerializer):
-#     class Meta:
-#         model = User
-#         fields = ['url', 'username', 'email', 'groups']
+class UserSerializer(ModelSerializer):
+    class Meta:
+        model = User
+        fields = ['url', 'username', 'email', 'groups']

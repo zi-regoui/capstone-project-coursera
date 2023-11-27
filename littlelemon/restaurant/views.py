@@ -3,7 +3,7 @@ from django.shortcuts import render
 from .forms import BookingForm
 from .models import Menu, Booking
 from rest_framework import viewsets, permissions
-# from .serializers import BookingSerializer, UserSerializer
+from .serializers import UserSerializer
 from django.contrib.auth.models import User
 
 # Create your views here.
@@ -35,7 +35,7 @@ def display_menu_item (request, pk = None):
     menu_item_dict = {'menu_item': menu_item}
     return render(request, 'menu_item.html', menu_item_dict)
 
-# class UserViewSet(viewsets.ModelViewSet):
-#    queryset = User.objects.all()
-#    serializer_class = UserSerializer
-#    permission_classes = [permissions.IsAuthenticated] 
+class UserViewSet(viewsets.ModelViewSet):
+   queryset = User.objects.all()
+   serializer_class = UserSerializer
+   permission_classes = [permissions.IsAuthenticated] 

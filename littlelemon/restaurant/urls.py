@@ -8,6 +8,6 @@ urlpatterns = [
     path('book/', views.book, name="book"),
     path('menu/', views.menu, name="menu"),
     path('menu_item/<int:pk>/', views.display_menu_item, name="menu_item"),
-    # path('auth/', include('djoser.urls')),
-    # path('auth/', include('djoser.urls.authtoken'))
+    path('auth/', include('djoser.urls')),
+    path('auth/', include('djoser.urls.authtoken'))
 ]
